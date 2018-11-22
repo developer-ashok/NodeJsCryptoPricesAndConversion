@@ -17,8 +17,8 @@
 5. localhost:3030 in your browser
 ```
 
-## *Note: Still some of the content is static change it as per your need. this is just demo of showing digital currency price using NodeJs
+*Note: Still some of the content is static change it as per your need. this is just demo of showing digital currency price using NodeJs*
 
-#Credits
+# Credits
 1. [coinmarketcap.com](coinmarketcap.com)
 2. [colorlib.com](colorlib.com)
