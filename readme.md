@@ -9,15 +9,14 @@
 
 # Quick Installation
 ```
-# code block
-1. $ Clone repository
+1. $ clone [repository]
 2. $ cd diecotory where you clone repository
 3. $ npm install
 4. $ npm start
 5. localhost:3030 in your browser
 ```
 
-*Note: Still some of the content is static change it as per your need. this is just demo of showing digital currency price using NodeJs*
+* **Note**: Still some of the content is static change it as per your need. this is just demo of showing digital currency price using NodeJs*
 
 # Credits
 1. [coinmarketcap.com](coinmarketcap.com)
