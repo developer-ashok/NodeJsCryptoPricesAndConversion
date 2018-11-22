@@ -1,4 +1,4 @@
-# Crypto Currency Prices | +Conversion 
+# Crypto Currency Prices+Conversion | NodeJS
 
 **This package is handeled the server side works of NodeJs and HTML by using [coinmarketcap.com](coinmarketcap.com) API's and [colorlib.com](colorlib.com) Templates**
 
