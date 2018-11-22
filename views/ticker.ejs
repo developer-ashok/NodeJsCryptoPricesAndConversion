@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/builder/img/favicon.png" type="image/png">
+    <title>Builder Construction Multi</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/builder/css/bootstrap.css">
+    <link rel="stylesheet" href="/builder/vendors/linericon/style.css">
+    <link rel="stylesheet" href="/builder/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/builder/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/builder/vendors/lightbox/simpleLightbox.css">
+    <link rel="stylesheet" href="/builder/vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="/builder/vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="/builder/css/style.css">
+    <link rel="stylesheet" href="/builder/css/responsive.css">
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+</head>
+
+<body>
+
+<%- include("layouts/header")%>
+
+                <!--================Feature Area =================-->
+                <section class="feature_area p_10">
+                    <div class="container">
+                      <div class="main_title">
+                          <h2>Crypto Currency Future Of The Young Generation </h2>
+                      </div>
+                      <div class="p-3">
+                          <form action="/ticker" method="get">
+                            <div class="row">
+                              <div class="col-sm-2">
+                                  Convert Currency<br/>
+                                  <select name="c" onchange="this.form.submit()">
+                                      <option value="USD">Convert Currency</option>                
+                                      <% currencies.forEach(function(cData, cIndex) {%>
+                                        <option value="<%= cData%>" <%= ( convert === cData) ? "selected" : ""%> > <%= cData %></option>
+                                      <% });%>  
+                                  </select>
+                              </div>
+                              <div class="col-sm-2">
+                                  Sorting<br/>
+                                  <select name="s" onchange="this.form.submit()">
+                                      <option value="id">Sorting</option>                
+                                      <% sortings.forEach(function(sData, sIndex) {%>
+                                        <option value="<%= Object.keys(sData)[0]%>" <%= (dsort === Object.keys(sData)[0]) ? "selected" : ""%> ><%= sData[Object.keys(sData)[0]]%></option>
+                                      <% });%>  
+                                  </select>
+                              </div>
+                            </div>                            
+                          </form>  
+                        <!-- <p>Who are in extremely love with eco friendly system.</p> -->
+                      </div>
+                      
+                      <div class="row feature_inner">
+                          <% tickerData.forEach(function(data, index) {%>
+                          <div class="col-lg-4 col-md-6">
+                            <div class="feature_item">                                
+                              <h4 style="text-align: center">                                  
+                                  <!-- <i class="lnr lnr-diamond"></i> -->
+                                  <img src="https://s2.coinmarketcap.com/static/img/coins/32x32/<%= data.id %>.png" /> <span style="margin-right: 5px;"></span>
+                                  <%= data.name %>
+                                  <a href="/ticker/get/<%= data.id %>" target="_blank">__</a>
+                              </h4>
+                                
+                              <table class="table table-bordered">
+                                <tr class="table-primary">
+                                    <th>Symbol</td>
+                                    <td><%= data.symbol %></td>                                    
+                                </tr>
+                                <tr class="table-secondary">
+                                    <th>Website slug</td>
+                                    <td><%= data.website_slug %></td>                                    
+                                </tr>
+                                <tr class="table-success">
+                                    <th>Rank</td>
+                                    <td><%= data.rank %></td>                                    
+                                </tr>
+                                <tr class="table-danger">
+                                    <th>Circulating Supply</td>
+                                    <td><%= data.circulating_supply %></td>                                    
+                                </tr>
+                                <tr class="table-warning">
+                                    <th>Total Supply</td>
+                                    <td><%= data.total_supply %></td>                                    
+                                </tr>
+                                <tr class="table-info">
+                                    <th>Max Supply</td>
+                                    <td><%= data.max_supply %></td>                                    
+                                </tr>
+                                <!-- <tr class="table-secondary">
+                                    <th>Price (<%=convert%>)</td>
+                                    <td><%= data.quotes[convert].price %></td>                                    
+                                </tr>
+                                <tr class="table-danger">
+                                    <th>24H Volume (<%=convert%>)</td>
+                                    <td><%= data.quotes[convert].volume_24h %></td>                                    
+                                </tr>
+                                <tr class="table-primary">
+                                    <th>Market Cap (<%=convert%>)</td>
+                                    <td><%= data.quotes[convert].market_cap %></td>                                    
+                                </tr>
+                                <tr class="table-secondary">
+                                    <th>% Change in 1H (<%=convert%>)</td>
+                                    <td><%= data.quotes[convert].percent_change_1h %></td>                                    
+                                </tr>
+                                <tr class="table-success">
+                                    <th>% Change in 24H (<%=convert%>)</td>
+                                    <td><%= data.quotes[convert].percent_change_24h %></td>                                    
+                                </tr>
+                                <tr class="table-danger">
+                                    <th>% Change 7D (<%=convert%>)</td>
+                                    <td><%= data.quotes[convert].percent_change_7d %></td>                                    
+                                </tr>
+                                <tr class="table-warning">
+                                    <th>Last Updated</td>
+                                    <td><%= data.last_updated %></td>                                    
+                                </tr> -->
+                              </table>
+                            </div>
+                          </div>
+                          <% });%>
+                      </div>               
+                    </div>
+                  </section>
+                  <!--================End Feature Area =================-->
+
+
+<!-- home_banner_area.ejs -->
+<%- include("partial_view/service_area")%>
+<%- include("partial_view/builder_image_area")%>
+<%- include("partial_view/team_area")%>
+<%- include("partial_view/counter_area")%>
+<%- include("partial_view/testimonials_area")%>
+<%- include("partial_view/client_logo_area")%>
+<%- include("layouts/footer")%>
+</body>
+</html>
