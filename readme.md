@@ -1,6 +1,6 @@
 # Crypto Currency Prices | +Conversion 
 
-## *This package is handeled the server side works of NodeJs and HTML by using [coinmarketcap.com](coinmarketcap.com) API's and [coinmarketcap.com](colorlib.com) Templates*
+**This package is handeled the server side works of NodeJs and HTML by using [coinmarketcap.com](coinmarketcap.com) API's and [colorlib.com](colorlib.com) Templates**
 
 
 # Requirements
@@ -21,4 +21,4 @@
 
 #Credits
 1. [coinmarketcap.com](coinmarketcap.com)
-2. [coinmarketcap.com](colorlib.com)
+2. [colorlib.com](colorlib.com)
