@@ -1,4 +1,4 @@
-**# Crypto Currency Prices | +Conversion **
+# Crypto Currency Prices | +Conversion 
 
 ## *This package is handeled the server side works of NodeJs and HTML by using [Link](coinmarketcap.com) API's and [Link](colorlib.com) Templates*
 
@@ -20,5 +20,5 @@
 ## *Note: Still some of the content is static change it as per your need. this is just demo of showing digital currency price using NodeJs
 
 #Credits
-1. [Link](coinmarketcap.com)
-2. [Link](colorlib.com)
+1. [coinmarketcap.com](coinmarketcap.com)
+2. [coinmarketcap.com](colorlib.com)
